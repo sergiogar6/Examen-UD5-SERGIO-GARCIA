@@ -68,6 +68,7 @@ public class Corredor {
         this.vueltas_completadas = vueltas_completadas;
     }
 
+    //Añade los patrocinadores pasados por parametros vararc a la lista de patrocinadores
     public void insertarPatrocinador(String... patrocinadores) {
         listaPatrocinadores.addAll(Arrays.asList(patrocinadores));
         System.out.println("Nuevos patrocinadores añadidos para el corredor " + this.nombre);

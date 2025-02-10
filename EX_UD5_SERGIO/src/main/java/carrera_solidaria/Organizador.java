@@ -37,6 +37,7 @@ public class Organizador {
                 '}';
     }
 
+    //recorre la lista de corredores e imprime el nombre de cada corredor.
     public void mostrarCorredores() {
         System.out.println("Corredores inscritos: " + listaCorredores.size());
         int i = 0;
@@ -46,6 +47,7 @@ public class Organizador {
         }
     }
 
+    //Si no hay mas de 700 corredores añade el corredor a la lista de corredores si no un mensjae indica que el limite se ha alcanzado
     public void inscribir_corredor(Corredor corredor) {
         if (listaCorredores.size() <= 700) {
             listaCorredores.add(corredor);
@@ -55,6 +57,7 @@ public class Organizador {
         }
     }
 
+    // calcula la donacion total multiplicando el numero de vueltas por el importe de vuelta
     public void calcularDonacion(Corredor corredor) {
         double donacionTotal = corredor.getImporte_vuelta() * corredor.getVueltas_completadas();
         System.out.println("El corredor " + corredor.getNombre() + " donará " + donacionTotal + " €");
